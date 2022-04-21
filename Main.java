@@ -50,15 +50,30 @@ public class Main {
         DiskScheduler FCFS = new FCFS(initialSequence, initialHeadStart);
         FCFS.run();
         FCFS.printResults();
+
         DiskScheduler SSTF = new SSTF(initialSequence, initialHeadStart);
         SSTF.run();
         SSTF.printResults();
+
         DiskScheduler Scan = new Scan(initialSequence, initialHeadStart, diskSize, direction);
         Scan.run();
         Scan.printResults();
+
+        DiskScheduler cScan = new CircularScan(initialSequence, initialHeadStart, diskSize, direction);
+        cScan.run();
+        cScan.printResults();
+
         DiskScheduler Look = new Look(initialSequence, initialHeadStart, direction);
         Look.run();
         Look.printResults();
+
+        DiskScheduler cLook = new CircularLook(initialSequence, initialHeadStart, direction);
+        cLook.run();
+        cLook.printResults();
+
+        DiskScheduler optimized = new Optimized(initialSequence, initialHeadStart);
+        optimized.run();
+        optimized.printResults();
     }
 }
 
