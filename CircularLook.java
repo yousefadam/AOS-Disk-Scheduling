@@ -62,15 +62,8 @@ public class CircularLook extends DiskScheduler{
                 currentHead = current;
             }
         }
+        printResults("CircularLook", totalHeadMovements, sequence);
     }
 
-    @Override
-    public void printResults() {
-        System.out.println("Circular Look:");
-        System.out.print("Sequence");
-        for (Integer element:sequence) {
-            System.out.print(" -> " + element);
-        }
-        System.out.println("\nTotal Head Movements: " + totalHeadMovements);
-    }
+
 }

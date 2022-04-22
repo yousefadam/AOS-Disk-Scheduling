@@ -59,15 +59,9 @@ public class Look extends DiskScheduler{
                 currentHead = current;
             }
         }
+
+        printResults("Look", totalHeadMovements, sequence);
     }
 
-    @Override
-    public void printResults() {
-        System.out.println("Look:");
-        System.out.print("Sequence");
-        for (Integer element:sequence) {
-            System.out.print(" -> " + element);
-        }
-        System.out.println("\nTotal Head Movements: " + totalHeadMovements);
-    }
+
 }

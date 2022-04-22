@@ -69,15 +69,8 @@ public class CircularScan extends DiskScheduler{
                 currentHead = current;
             }
         }
+        printResults("CircularScan", totalHeadMovements, sequence);
     }
 
-    @Override
-    public void printResults() {
-        System.out.println("Circular Scan:");
-        System.out.print("Sequence");
-        for (Integer element:sequence) {
-            System.out.print(" -> " + element);
-        }
-        System.out.println("\nTotal Head Movements: " + totalHeadMovements);
-    }
+
 }

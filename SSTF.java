@@ -47,15 +47,9 @@ public class SSTF extends DiskScheduler{
                 }
             }
         }
+
+        printResults("SSTF", totalHeadMovements, sequence);
     }
 
-    @Override
-    public void printResults() {
-        System.out.println("SSTF:");
-        System.out.print("Sequence");
-        for (Integer element:sequence) {
-            System.out.print(" -> " + element);
-        }
-        System.out.println("\nTotal Head Movements: " + totalHeadMovements);
-    }
+
 }

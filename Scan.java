@@ -64,15 +64,9 @@ public class Scan extends DiskScheduler{
                 currentHead = current;
             }
         }
+
+        printResults("Scan", totalHeadMovements, sequence);
     }
 
-    @Override
-    public void printResults() {
-        System.out.println("Scan:");
-        System.out.print("Sequence");
-        for (Integer element:sequence) {
-            System.out.print(" -> " + element);
-        }
-        System.out.println("\nTotal Head Movements: " + totalHeadMovements);
-    }
+
 }

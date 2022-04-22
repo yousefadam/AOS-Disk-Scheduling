@@ -1,0 +1,5 @@
+the idea of the optimized algorithm is to process all the requests though only a single disk traversal.
+- The request queue is sorted ascendingly based the request's position.
+- The algorithms starts at 0, the disk beginning.
+- Then the head traverses through the disk once,
+processing all the requests and stop right after the last request, with the largest position.
